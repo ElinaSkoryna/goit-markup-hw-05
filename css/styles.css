@@ -535,10 +535,11 @@ align-items: center;
 
 .div-subscribe-form {
     display: flex;
+    gap: 24px;
 }
 
 .div-subscribe-input {
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
         border-radius: 4px;
         width: 264px;
         height: 40px;
@@ -548,14 +549,14 @@ font-weight: 400;
     font-size: 12px;
     line-height: 2;
         letter-spacing: 0.04em;
-        color: #fff;
+        color: #ffffff;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
     margin-right: 24px;
     }
 .div-subscribe-input::placeholder {
-color: #fff;
+color: #ffffff;
 }
 
 .div-subscribe-lable {
@@ -568,17 +569,20 @@ color: #fff;
         min-width: 165px;
         height: 40px;
         background-color: #4d5ae5;
+        font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.04em;
         text-align: center;
-        color: #fff;
+        color: #ffffff;
         cursor: pointer;
         border: none;
         padding: 8px 24px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            
+        display: flex;
+        justify-content: center;
+        align-items: center;    
 
 }
 
@@ -590,6 +594,7 @@ color: #fff;
 
 .div-subscribe-icon {
     fill: #fff;
+    margin-left: 16px;
 }
 
 .backdrop {
@@ -639,18 +644,22 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     position: absolute;
     top: 24px;
     right: 24px;
-    border: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
-        border-radius: 100%;
+        border-radius: 50%;
         background-color: #e7e9fc;
         width: 24px;
         height: 24px;
         cursor: pointer;
         fill: #2e2f42;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
-  
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover ,
@@ -667,6 +676,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 
 .modal-title {
         font-family: "Roboto", sans-serif;
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
@@ -683,6 +693,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
         background-color: transparent;
         padding-left: 38px;
         outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -697,7 +708,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
         line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
-        display: inline-block;
+        display: block;
         margin-bottom: 4px;
 }
 
@@ -715,6 +726,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus + .modal-icon {
     fill: #4d5ae5;
@@ -728,17 +740,19 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
     height: 56px;
+    font-family: "Roboto", sans-serif;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4d5ae5;
     cursor: pointer;
     border: none;
     margin-top: 24px;
     margin-bottom: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-dtn:hover,
@@ -746,7 +760,9 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     background-color: #404bbf;
 }
 
-
+.modal-div-textarea {
+    margin-bottom: 16px;
+}
 
 .modal-textarea {
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -759,8 +775,11 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
         resize: none;
         font-weight: 400;
             font-size: 12px;
-            line-height: 1.16667;
+            line-height: 1.17;
             letter-spacing: 0.04em;
+            color: rgba(46, 47, 66, 0.4);
+            outline: transparent;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             
 }
 
@@ -778,6 +797,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 
 .modal-check {
     margin-top: 16px;
+    margin-bottom: 24px;
 
 }
 .modal-check-icon {
@@ -789,7 +809,7 @@ transition: opacyti 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     height: 16px;
     border-radius: 2px;
         border: 1px solid rgba(46, 47, 66, 0.4);
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-right: 8px;
